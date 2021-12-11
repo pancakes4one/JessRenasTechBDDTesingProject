@@ -18,16 +18,12 @@ public class ItemView_Page {
 
     @FindBy(xpath = "//strong[.='Guru99 Payment Gateway']")
     private WebElement payGateHeader;
-
     @FindBy(xpath = "//h2[.='Mother Elephant With Babies Soft Toy']")
     private WebElement itemHeader;
-
     @FindBy(name = "quantity")
     private WebElement quantity;
-
     @FindBy(xpath = "//input[@type='submit']")
     private WebElement buyNowBtn;
-
     @FindBy(xpath = "//h3[contains(text(), 'Price:')]")
     private WebElement priceShown;
 
