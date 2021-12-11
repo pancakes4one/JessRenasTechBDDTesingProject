@@ -1,0 +1,14 @@
+Personal Project Notes
+
+- html cucumber reports
+
+- json reports
+    JSON Formatter: https://jsonformatter.curiousconcept.com/#
+
+- xml reports
+    have never ran, had an error when running, may need plugin
+
+    * when you run each, it will delete the previous one
+
+
+target - right-click open in ...
