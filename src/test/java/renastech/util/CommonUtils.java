@@ -29,7 +29,6 @@ public static void clickWithWait(WebElement webElement) {
 
  // Util 2:
     public static void selectFromDropdown(WebElement element,String text) {
-
         Select select = new Select(element);
         select.selectByValue(text);
         try { Thread.sleep(1000); } catch (Exception e) { e.printStackTrace(); }
@@ -37,8 +36,8 @@ public static void clickWithWait(WebElement webElement) {
 
 // Util 3:
     public static int getRandomNumBetween(int lowBound, int upBound) {
-    Random random = new Random();
-    return (random.nextInt(upBound) + lowBound);
+        Random random = new Random();
+        return (random.nextInt(upBound) + lowBound);
     }
 
 // Util 4:

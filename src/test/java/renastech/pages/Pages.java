@@ -21,9 +21,9 @@ public class Pages {
             pay = new PayProcess_Page(); }
         return pay; }
 
-    public ConfirmPurchase_Page confirm(){
+    public ConfirmPurchase_Page confirm() {
         if (confirm==null){
-            confirm =  new ConfirmPurchase_Page(); }
+            confirm = new ConfirmPurchase_Page(); }
         return confirm; }
 
 }

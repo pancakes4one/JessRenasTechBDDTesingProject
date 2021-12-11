@@ -84,7 +84,7 @@ public class PayGate_Steps extends Pages{
 
     @Then("The user wants to select CVV code")
     public void the_user_wants_to_select_cvv_code() {
-        pages.pay().setCardCVVcode();
+        pages.pay().setCVVcode();
     }
 
 
