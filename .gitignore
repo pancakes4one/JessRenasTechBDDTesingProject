@@ -1,0 +1,14 @@
+#ignore target file
+/target
+
+# ignore Mac system files
+.DS_store
+
+# ignore all text files / personal project notes
+src/test/java/renastech/runner/notes.txt
+
+#ignore all txt files
+#*.txt
+
+# ignore files related to API keys
+.env
