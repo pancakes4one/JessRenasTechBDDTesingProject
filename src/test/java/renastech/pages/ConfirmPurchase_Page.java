@@ -11,7 +11,7 @@ public class ConfirmPurchase_Page {
 
     private static final Logger log = Logger.getLogger(ConfirmPurchase_Page.class);
 
-    public ConfirmPurchase_Page(){ PageFactory.initElements(Driver.getDriver(),this);}
+    public ConfirmPurchase_Page(){ PageFactory.initElements(Driver.getDriver(),this); }
 
     @FindBy (xpath = "//h2[contains(text(),'Payment successfull!')]")
     private WebElement paySuccessHeader;

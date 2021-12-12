@@ -47,7 +47,7 @@ public class ItemView_Page {
 
     public String setQuantity(String qty){
         CommonUtils.selectFromDropdown(quantity,qty);
-        log.info("Quantity Set");
+        log.info("Quantity Set as ");
         return "Quantity selected: \""+qty+"\"";
     }
 

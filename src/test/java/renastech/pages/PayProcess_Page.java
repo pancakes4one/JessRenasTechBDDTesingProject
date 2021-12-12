@@ -19,7 +19,7 @@ public class PayProcess_Page {
     public PayProcess_Page() { PageFactory.initElements(Driver.getDriver(),this); }
 
     @FindBy (id = "card_nmuber")
-    private WebElement cardNmber;
+    private WebElement cardNum;
     @FindBy (id = "month")
     private WebElement dropdown_expMth;
     @FindBy (id = "year")
@@ -32,8 +32,8 @@ public class PayProcess_Page {
     //faker for CC
     Faker faker = new Faker();
 
-    public void setCardNmberWithFaker() {
-     cardNmber.sendKeys(faker.business().creditCardNumber().replaceAll("-",""));
+    public void setCardNumWithFaker() {
+     cardNum.sendKeys(faker.business().creditCardNumber().replaceAll("-",""));
     }
 
     public void setExpMthDropRandomSelect() {
@@ -43,19 +43,17 @@ public class PayProcess_Page {
         allMonths.get(CommonUtils.getRandomNumBetween(1,selectMax)).click();
     }
 
-    public void setexpYearDropRandomSelect(){
+    public void setExpYearDropRandomSelect(){
         Select mthOptions = new Select(dropdown_expYear);
         List<WebElement> allMonths = mthOptions.getOptions();
         int selectMax = allMonths.size()-1;
         allMonths.get(CommonUtils.getRandomNumBetween(1,selectMax)).click();
     }
 
-    public void setCVVcode() {
-        CVVcode.sendKeys(CommonUtils.getRandomThreeNumberString());
-    }
+    public void setCVVcode() { CVVcode.sendKeys(CommonUtils.getRandomThreeNumberString()); }
 
     public void setAllCardInfoWithDatatable(Map<String,String> userPayInfo){
-        cardNmber.sendKeys(userPayInfo.get("CNumber"));
+        cardNum.sendKeys(userPayInfo.get("CNumber"));
         Select dropMth =new Select(dropdown_expMth); dropMth.selectByVisibleText(userPayInfo.get("EMonth"));
         Select dropYr =new Select (dropdown_expYear); dropYr.selectByVisibleText(userPayInfo.get("EYear"));
         CVVcode.sendKeys(userPayInfo.get("CVVCode"));

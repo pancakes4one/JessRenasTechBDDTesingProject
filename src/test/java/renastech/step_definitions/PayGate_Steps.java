@@ -10,8 +10,6 @@ public class PayGate_Steps extends Pages{
 
     Pages pages = new Pages();
 
-    Logger log = Logger.getLogger(PayGate_Steps.class);
-
     @Then("The user wants to verify they are at beginning of Payment Gateway")
     public void the_user_wants_to_verify_they_are_at_beginning_of_payment_gateway() {
         pages.item().verifyPayGateHeaderisDisplayed();
@@ -69,7 +67,7 @@ public class PayGate_Steps extends Pages{
 
     @Then("The user wants to enter credit card number")
     public void the_user_wants_to_enter_credit_card_number() {
-        pages.pay().setCardNmberWithFaker();
+        pages.pay().setCardNumWithFaker();
     }
 
     @Then("The user wants to select expiration month")
@@ -79,7 +77,7 @@ public class PayGate_Steps extends Pages{
 
     @Then("The user wants to select expiration year")
     public void the_user_wants_to_select_expiration_year() {
-        pages.pay().setexpYearDropRandomSelect();
+        pages.pay().setExpYearDropRandomSelect();
     }
 
     @Then("The user wants to select CVV code")

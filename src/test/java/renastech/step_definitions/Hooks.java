@@ -3,6 +3,7 @@ package renastech.step_definitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import renastech.util.ConfigRdr;
@@ -12,9 +13,11 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
+    Logger log = Logger.getLogger(Hooks.class);
+
     @Before
     public void setup(Scenario scenario) {
-        System.out.println(" ::: TEST EXECUTION START ::: ");
+        log.info(" ::: TEST EXECUTION START ::: ");
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get(ConfigRdr.getProperty("url"));
         Driver.getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -30,7 +33,7 @@ public class Hooks {
             scenario.attach(data, "image/png", scenario.getName());
         }
         Driver.closeDriver();
-        System.out.println("::: END OF TEST EXECUTION :::");
+        log.info(" ::: TEST EXECUTION END ::: ");
     }
 
 }
